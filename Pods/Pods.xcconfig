@@ -1,0 +1,8 @@
+ALWAYS_SEARCH_USER_PATHS = YES
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = ${PODS_HEADERS_SEARCH_PATHS}
+OTHER_LDFLAGS = -ObjC -Wl,-no_compact_unwind -licucore -framework CFNetwork -framework CoreData -framework CoreText -framework MessageUI -framework MobileCoreServices -framework QuartzCore -framework Security -framework SystemConfiguration -framework UIKit
+PODS_BUILD_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/AFNetworking" "${PODS_ROOT}/BuildHeaders/BlocksKit" "${PODS_ROOT}/BuildHeaders/FPPopover" "${PODS_ROOT}/BuildHeaders/MGBox2" "${PODS_ROOT}/BuildHeaders/MagicalRecord" "${PODS_ROOT}/BuildHeaders/PonyDebugger" "${PODS_ROOT}/BuildHeaders/SVProgressHUD" "${PODS_ROOT}/BuildHeaders/SocketRocket" "${PODS_ROOT}/BuildHeaders/UAGithubEngine" "${PODS_ROOT}/BuildHeaders/ViewDeck" "${PODS_ROOT}/BuildHeaders/libffi"
+PODS_HEADERS_SEARCH_PATHS = ${PODS_PUBLIC_HEADERS_SEARCH_PATHS}
+PODS_PUBLIC_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/BlocksKit" "${PODS_ROOT}/Headers/FPPopover" "${PODS_ROOT}/Headers/MGBox2" "${PODS_ROOT}/Headers/MagicalRecord" "${PODS_ROOT}/Headers/PonyDebugger" "${PODS_ROOT}/Headers/SVProgressHUD" "${PODS_ROOT}/Headers/SocketRocket" "${PODS_ROOT}/Headers/UAGithubEngine" "${PODS_ROOT}/Headers/ViewDeck" "${PODS_ROOT}/Headers/libffi"
+PODS_ROOT = ${SRCROOT}/Pods

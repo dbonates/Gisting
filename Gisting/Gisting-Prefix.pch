@@ -1,0 +1,29 @@
+//
+// Prefix header for all source files of the 'Gisting' target in the 'Gisting' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+
+#import "DBmacros.h"
+#import "SVProgressHUD.h"
+#import "CoreData+MagicalRecord.h"
+
+#define MR_SHORTHAND
+
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+
+//#define BASE_URL @"http://panorama.bonates.com"
+#define BASE_URL @"http://ipadreaderserver.dev"
+
+# define isPad UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
