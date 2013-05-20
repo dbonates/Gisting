@@ -20,10 +20,16 @@
 
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"gists.sqlite"];
     
-    [[PDDebugger defaultInstance] connectToURL:[NSURL URLWithString:@"ws://localhost:9000/device"]];
-    [[PDDebugger defaultInstance] enableNetworkTrafficDebugging];
-    [[PDDebugger defaultInstance] enableCoreDataDebugging];
-    [[PDDebugger defaultInstance] addManagedObjectContext:[NSManagedObjectContext MR_contextForCurrentThread]];
+    /*
+     Pony DEBUG: #import "PonyDebugger.h"
+     */
+    PDDebugger *debugger = [PDDebugger defaultInstance];
+    [debugger connectToURL:[NSURL URLWithString:@"ws://localhost:9000/device"]];
+    [debugger enableNetworkTrafficDebugging];
+    [debugger enableCoreDataDebugging];
+    [debugger addManagedObjectContext:[NSManagedObjectContext MR_contextForCurrentThread]];
+    [debugger forwardAllNetworkTraffic];
+    [debugger enableViewHierarchyDebugging];
 
     
     return YES;
